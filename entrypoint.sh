@@ -13,7 +13,7 @@ runner:
   fetch_timeout: 5s
   fetch_interval: 2s
   labels:
-    - "ubuntu-latest:host://-self-hosted"
+    - "ubuntu-latest"
 container:
   network: ""
   privileged: false
@@ -27,6 +27,6 @@ forgejo-runner register \
   --instance "${FORGEJO_URL}" \
   --token "${FORGEJO_RUNNER_TOKEN}" \
   --name "${FORGEJO_RUNNER_NAME:-blitz-runner}" \
-  --labels "ubuntu-latest:host://-self-hosted" \
+  --labels "ubuntu-latest"
   --config /tmp/runner/config.yml
 exec forgejo-runner daemon --config /tmp/runner/config.yml
