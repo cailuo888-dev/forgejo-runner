@@ -1,4 +1,4 @@
-FROM code.forgejo.org/forgejo/runner:3.6.3
+FROM forgejo/runner:3.6.3
 USER root
 RUN apt-get update && apt-get install -y python3 python3-pip \
     libnss3 libnspr4 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 \
